@@ -17,8 +17,8 @@ class Producto(Model):
     # podemos crear la tabla con un nombre especifico pero se lo tenemos
     # que indicar directamente en la metaclase
 
-class Meta:
-    db_table = "product_table"
+    class Meta:
+        db_table = "product_table"
 
 
     def __str__(self):
