@@ -37,7 +37,6 @@ CUSTOM_APPS = [
 
 EXTERNAL_APPS = [
     "rest_framework"
-
 ]
 
 
