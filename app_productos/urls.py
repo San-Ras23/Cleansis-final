@@ -1,6 +1,8 @@
 from django.contrib import admin
 from django.urls import path , include
 
+from .router import router
+
 from .views import      ProductoListView   \
                     ,   ProductoDetailView \
                     ,   ProductoCreateView \
@@ -16,3 +18,5 @@ urlpatterns = [
     path("<int:pk>/update/", ProductoUpdateView.as_view(), name="update"),
     path("<int:pk>/delete/", ProductoDeleteView.as_view(), name="delete")
 ]
+
+urlpatterns += router.urls
