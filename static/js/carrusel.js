@@ -1,15 +1,18 @@
-const punto     = document.querySelectorAll('.punto')
-const carrouselImages = document.querySelectorAll(".img")
+const grande = document.querySelector('.grande')
+const punto = document.querySelectorAll('.punto')
+
 
 punto.forEach( ( cadaPunto , i )=> {
     
     punto[i].addEventListener('click',()=>{
+
+      
+        grande.style.transform = `translateX(${ i * (-50)}%)`
+
         punto.forEach( ( cadaPunto , i )=>{
             punto[i].classList.remove('activo')
-            carrouselImages[i].classList.remove("select")
         })
         punto[i].classList.add('activo')
-        carrouselImages[i].classList.add('select')
 
     })
 })

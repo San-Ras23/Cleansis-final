@@ -6,8 +6,11 @@
 	<link rel="stylesheet" href="{% static './css/style-productos.css' %}">
 	<link rel="stylesheet" href="{% static './css/style-productos-hover.css' %}">
 	<link rel="stylesheet" href="{% static './css/carrousel.css' %}">
-	<script defer src="{% static './js/carrusel.js' %}"></script>
 
+	
+	<script defer src="{% static './js/carrusel.js' %}"></script>
+	
+	
 	<title>Distribuidora Cleansis</title>
 
 </head>
@@ -62,6 +65,7 @@
 							<li><a href="#">Alfombras y Felpudos</a></li>
 							<li><a href="#">Franelas y Microfibras</a></li>
 							<li><a href="#">Regillas y Paños</a></li>
+							
 							<li><a href="#">Trapos de Piso</a></li>
 						</ul>
 					</li>
@@ -73,17 +77,8 @@
 							<li><a href="#">Cloro Piletas</a></li>
 						</ul>
 					</li>
-
-					{% if user.is_authenticated %}
-					<li class="menu_productos"><a href="{% url 'producto:all' %}">
-						<i class="fa-solid fa-jug-detergent fa-l" style="color: #ffffff;">
-							
-						<span style="font-size: 10px;"> Hola!, {{user.username}} podés acceder a:</span>
-						Productos</i>
-					</a>
-					</li>
-					{% endif %}
-
+				</li>
+				
 				</ul>
 			</nav>
 		</section>
@@ -91,7 +86,7 @@
 	<main>
 		<div class="carrousel">
 			<div class="grande">
-				<img src="{% static './media/carrusel/Oferta.png' %}" alt= "Imagen 1" class="img" >
+				<img src="{% static './media/carrusel/Oferta.png' %}" alt="Imagen 1" class="img" >
 				<img src="{% static './media/carrusel/Registro.png' %}" alt="Imagen 2" class="img">
 				<img src="{% static './media/carrusel/Encuesta.png' %}" alt="Imagen 3" class="img">
 				<img src="{% static './media/carrusel/reciclaje.png' %}" alt="Imagen 4" class="img">

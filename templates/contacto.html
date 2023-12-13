@@ -4,7 +4,9 @@
 
     <link rel="stylesheet" href="{% static './css/style.css' %}">
 	<link rel="stylesheet" href="{% static './css/contacto-styles.css' %}">
+
 	<script defer src="{% static './js/app.js' %}"></script>
+
 	<title>Distribuidora Cleansis Contacto</title>
 
 </head>
@@ -35,8 +37,8 @@
 					<li class="menu_productos"><a href="#"><i class="fa-solid fa-broom fa-l" style="color: #ffffff;">
 								Limpieza</i></a>
 						<ul class="submenu">
-							<li><a href="/escobas.html">Escobas y Escobillones</a></li>
-							<li><a href="/secadores.html">Sopapas y Secadores</a></li>
+							<li><a href="{% url 'escobas' %}">Escobas y Escobillones</a></li>
+							<li><a href="{% url 'secadores' %}">Sopapas y Secadores</a></li>
 							<li><a href="#">Cabos y Barrenderos</a></li>
 							<li><a href="#">Palas y Bolsas</a></li>
 							<li><a href="#">Cepillos y Guantes</a></li>
@@ -94,19 +96,6 @@
 				</div>
 			</div>
 		</section>
-		<!-- javascrip -->
-		<script>
-			const $form = document.querySelector('#form')
-			const $buttonMailto = document.querySelector('#trucazo')
-			$form.addEventListener('submit', handleSubmit)
-			function handleSubmit(event) {
-				event.preventDefault()
-				const form = new FormData(this)
-				console.log(form.get('name'))
-				$buttonMailto.setAttribute('href', `mailto:distribuidoracleansis@gmail.com?subject=  nombre ${form.get('name')}  correo ${form.get('email')}  &body=${form.get('message')}`)
-				$buttonMailto.click()
-			}
-		</script>
 		<section class="mapa">
 			<div>
 				<h2>Nuestra sucursal</h2>
